@@ -1,0 +1,15 @@
+{
+  "timeframe_months": 12,
+  "currency": "USD",
+  "license_cost_per_user_per_month_usd": 30,
+  "implementation_fixed_cost_usd": 50000,
+  "change_management_per_department_usd": 5000,
+  "training_hours_per_user": 4,
+  "discount_rate_annual": 0.10,
+  "productivity_monetization_share": 0.5,
+  "notes": [
+    "License cost based on Microsoft 365 Copilot $30/user/month (2024).",
+    "Admin time share and coverage are conservative blended estimates across back-office functions.",
+    "Productivity monetization share reflects portion translated into measurable financial benefit within year 1."
+  ]
+}

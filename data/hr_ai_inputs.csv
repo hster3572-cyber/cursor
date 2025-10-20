@@ -1,0 +1,6 @@
+department,headcount,fully_loaded_cost_per_fte_usd,admin_time_pct,baseline_productivity_index,expected_automation_coverage_pct,productivity_uplift_pct_from_copilot,license_eligible_users_pct,adoption_start_month,adoption_ramp_months
+HR,25,90000,0.35,100,0.4,0.12,1.0,1,3
+Finance,30,110000,0.30,100,0.35,0.10,1.0,2,3
+IT,40,120000,0.25,100,0.30,0.08,0.8,2,4
+Operations,80,80000,0.20,100,0.25,0.06,0.5,3,4
+Legal/Admin,20,100000,0.40,100,0.35,0.10,1.0,3,3
