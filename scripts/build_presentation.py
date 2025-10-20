@@ -88,6 +88,13 @@ def build_presentation(outputs_dir: str):
     # Department table
     add_table_from_csv(prs, "Сводка по отделам (12 мес)", os.path.join(outputs_dir, "department_summary.csv"))
 
+    # Organization summary (NPV/ROI/Payback) from summary.txt if present
+    summary_txt = os.path.join(outputs_dir, "summary.txt")
+    if os.path.exists(summary_txt):
+        with open(summary_txt, "r", encoding="utf-8") as f:
+            lines = [line.strip() for line in f.readlines() if line.strip()]
+        add_bullets_slide(prs, "Финансовая сводка (12 мес)", lines)
+
     # Assumptions slide
     add_bullets_slide(
         prs,
@@ -109,6 +116,19 @@ def build_presentation(outputs_dir: str):
             "Рост throughput 5–15% при внедрении Copilot-подобных решений",
             "Сценарии: составление документов, сводки, ответы на запросы, анализ данных",
             "Риски: качество данных, безопасность, принятие пользователями",
+        ],
+    )
+
+    # Sources and references slide
+    add_bullets_slide(
+        prs,
+        "Источники (из открытых данных)",
+        [
+            "Microsoft 365 Copilot — $30/польз./мес (2024) — microsoft.com",
+            "McKinsey (2023) — Economic potential of generative AI: 20–30% времени на рутины",
+            "GitHub Copilot (2023) — до ~55% быстрее на типовых задачах разработки",
+            "MIT/Stanford (2023) — Call center: +14% производительности от GenAI",
+            "Harvard/BCG (2023) — Jagged Frontier: ~12% прироста на креативных задачах",
         ],
     )
 
